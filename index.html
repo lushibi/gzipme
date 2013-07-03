@@ -1,0 +1,148 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Gzipme</title>
+  <meta name="description" content="A simple Node.js module which gzip file for you! ">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Gzipme</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">A simple Node.js module which gzip file for you! </p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/caio-ribeiro-pereira/gzipme/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/caio-ribeiro-pereira/gzipme/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/caio-ribeiro-pereira/gzipme" class="code">View Gzipme on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="gzipme" class="anchor" href="#gzipme"><span class="octicon octicon-link"></span></a>gzipme</h1>
+
+<h1>
+<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><a href="https://travis-ci.org/caio-ribeiro-pereira/gzipme"><img src="https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master" alt="Build Status"></a><a href="https://gemnasium.com/caio-ribeiro-pereira/gzipme"><img src="https://gemnasium.com/caio-ribeiro-pereira/gzipme.png" alt="Dependency Status"></a>
+</h1>
+
+<p>A simple Node module and CLI which gzip file for you! :)</p>
+
+<p>It's built on top of zlib module of Node.js and it's very simple to use, just follow the documentation below...</p>
+
+<h2>
+<a name="module-version" class="anchor" href="#module-version"><span class="octicon octicon-link"></span></a>Module Version</h2>
+
+<h3>
+<a name="instalation" class="anchor" href="#instalation"><span class="octicon octicon-link"></span></a>Instalation</h3>
+
+<div class="highlight"><pre>npm install gzipme
+</pre></div>
+
+<h3>
+<a name="the-code" class="anchor" href="#the-code"><span class="octicon octicon-link"></span></a>The code</h3>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">gzipme</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gzipme'</span><span class="p">);</span>
+
+<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">);</span> <span class="c1">// it will compress and generate "file.txt.gz" in the same path.</span>
+
+<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> <span class="c1">// it will overwrite the "file.txt" replacing to the compressed file.</span>
+</pre></div>
+
+<h2>
+<a name="cli-version" class="anchor" href="#cli-version"><span class="octicon octicon-link"></span></a>CLI Version</h2>
+
+<h3>
+<a name="instalation-1" class="anchor" href="#instalation-1"><span class="octicon octicon-link"></span></a>Instalation</h3>
+
+<div class="highlight"><pre>npm install -g gzipme
+</pre></div>
+
+<h3>
+<a name="the-command" class="anchor" href="#the-command"><span class="octicon octicon-link"></span></a>The Command</h3>
+
+<div class="highlight"><pre>gzipme file.txt
+</pre></div>
+
+<p>to compress and generate "file.txt.gz" in the same path.</p>
+
+<p>or</p>
+
+<div class="highlight"><pre>gzipme -o file.txt
+</pre></div>
+
+<p>to overwrite the "file.txt" replacing to the compressed file.</p>
+
+<h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Caio Ribeiro Pereira <a href="mailto:caio.ribeiro.pereira@gmail.com">caio.ribeiro.pereira@gmail.com</a></p>
+
+<p>Twitter: <a href="http://twitter.com/crp_underground">http://twitter.com/crp_underground</a></p>
+
+<p>Blog: <a href="http://udgwebdev.com">http://udgwebdev.com</a></p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2013 <a href="mailto:caio.ribeiro.pereira@gmail.com">caio.ribeiro.pereira@gmail.com</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/caio-ribeiro-pereira" class="avatar"><img src="https://secure.gravatar.com/avatar/a444e1ba503ea1e02bb007a4f92df8c1?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/caio-ribeiro-pereira">caio-ribeiro-pereira</a> maintains <a href="https://github.com/caio-ribeiro-pereira/gzipme">Gzipme</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/caio-ribeiro-pereira/gzipme/tarball/master" class="tar">tar</a><a href="https://github.com/caio-ribeiro-pereira/gzipme/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
