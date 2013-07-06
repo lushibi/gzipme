@@ -40,14 +40,16 @@
       </nav>
       <section>
         <h2>
-<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
-
-<p>Gzipme is a simple Node module and CLI which gzip file for you! It's built on top of zlib module of Node.js and it's very simple to use, just follow the documentation below...</p>
-
-<h2>
 <a name="build-status" class="anchor" href="#build-status"><span class="octicon octicon-link"></span></a>Build Status</h2>
 
-<p><a href="https://travis-ci.org/caio-ribeiro-pereira/gzipme"><img src="https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master" alt="Build Status"></a><a href="https://gemnasium.com/caio-ribeiro-pereira/gzipme"><img src="https://gemnasium.com/caio-ribeiro-pereira/gzipme.png" alt="Dependency Status"></a></p>
+<p><a href="https://travis-ci.org/caio-ribeiro-pereira/gzipme"><img src="https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master" alt="Build Status"></a> <a href="https://gemnasium.com/caio-ribeiro-pereira/gzipme"><img src="https://gemnasium.com/caio-ribeiro-pereira/gzipme.png" alt="Dependency Status"></a></p>
+
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>A simple Node module and CLI tools which gzip files for you! :)</p>
+
+<p>It's very simple to use it, just follow the documentation below...</p>
 
 <h2>
 <a name="module-version" class="anchor" href="#module-version"><span class="octicon octicon-link"></span></a>Module Version</h2>
@@ -63,9 +65,14 @@
 
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">gzipme</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gzipme'</span><span class="p">);</span>
 
-<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">);</span> <span class="c1">// it will compress and generate "file.txt.gz" in the same path.</span>
+<span class="c1">// Compress "file.txt" to "file.txt.gz" in the same dir.</span>
+<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">);</span> 
 
-<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> <span class="c1">// it will overwrite the "file.txt" replacing to the compressed file.</span>
+<span class="c1">// Compress "file.txt" and overwrite it to "file.txt" in the same dir.</span>
+<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> 
+
+<span class="c1">// Compress "file.txt" to specified file "compressed.txt" in the same dir.</span>
+<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="s2">"compressed.txt"</span><span class="p">);</span>
 </pre></div>
 
 <h2>
@@ -78,33 +85,28 @@
 </pre></div>
 
 <h3>
-<a name="the-command" class="anchor" href="#the-command"><span class="octicon octicon-link"></span></a>The Command</h3>
+<a name="the-commands" class="anchor" href="#the-commands"><span class="octicon octicon-link"></span></a>The Commands</h3>
 
-<div class="highlight"><pre>gzipme file.txt
+<div class="highlight"><pre>// It<span class="s1">'s the same as function '</span>gzipme<span class="o">(</span><span class="s2">"file.txt"</span><span class="o">)</span><span class="s1">'.</span>
+<span class="s1">gzipme file.txt</span>
+<span class="s1">// It'</span>s the same as <span class="k">function</span> <span class="s1">'gzipme("file.txt", true)'</span>.
+gzipme -o file.txt
+// It<span class="s1">'s the same as function '</span>gzipme<span class="o">(</span><span class="s2">"file.txt"</span>, <span class="s2">"compressed.txt"</span><span class="o">)</span><span class="err">'</span>.
+gzipme -O compressed.txt file.txt
 </pre></div>
-
-<p>to compress and generate "file.txt.gz" in the same path.</p>
-
-<p>or</p>
-
-<div class="highlight"><pre>gzipme -o file.txt
-</pre></div>
-
-<p>to overwrite the "file.txt" replacing to the compressed file.</p>
 
 <h2>
-<a name="nodes-compatibilities" class="anchor" href="#nodes-compatibilities"><span class="octicon octicon-link"></span></a>Node's compatibilities</h2>
+<a name="nodejss-compatibilities" class="anchor" href="#nodejss-compatibilities"><span class="octicon octicon-link"></span></a>Node.js's compatibilities</h2>
 
 <ul>
 <li>0.5.x</li>
+<li>0.6.x</li>
 <li>0.7.x</li>
 <li>0.8.x</li>
 <li>0.9.x</li>
 <li>0.10.x</li>
 <li>0.11.x</li>
-</ul><p>On 0.6.x won't work because there is no fs.existSync function.</p>
-
-<h2>
+</ul><h2>
 <a name="running-tests" class="anchor" href="#running-tests"><span class="octicon octicon-link"></span></a>Running tests</h2>
 
 <p>Just clone this repository, and follow the commands below:</p>
@@ -118,15 +120,6 @@ npm <span class="nb">test</span>
 <p>It will run Mocha tests and will generate coverage reports and <a href="http://caio-ribeiro-pereira.github.io/gzipme/coverage.html">all coverage tests are here</a>.</p>
 
 <h2>
-<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
-
-<ul>
-<li>Decompress gzip files</li>
-<li>Compress directories and subdirectories</li>
-<li>Compress and Decompress in async function</li>
-</ul><p>New ideas will be welcome here! :D</p>
-
-<h2>
 <a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
 
 <p>Caio Ribeiro Pereira <a href="mailto:caio.ribeiro.pereira@gmail.com">caio.ribeiro.pereira@gmail.com</a></p>
@@ -136,11 +129,20 @@ npm <span class="nb">test</span>
 <p>Blog: <a href="http://udgwebdev.com">http://udgwebdev.com</a></p>
 
 <h2>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+
+<ul>
+<li>Decompress gzip files</li>
+<li>Compress directories and subdirectories</li>
+<li>Compress and Decompress in async function</li>
+</ul><p>New ideas will be welcome here! :D</p>
+
+<h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The MIT License (MIT)</p>
 
-<p>Copyright (c) 2013, Caio Ribeiro Pereira and contributors</p>
+<p>Copyright (c) 2013 <a href="mailto:caio.ribeiro.pereira@gmail.com">caio.ribeiro.pereira@gmail.com</a></p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
