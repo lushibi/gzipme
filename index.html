@@ -7,38 +7,37 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
+    <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
   <body>
-
-      <header>
-        <h1>Gzip files with Node.js - Gzipme</h1>
-        <p>A simple way to gzip your files with Node.js</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/caio-ribeiro-pereira/gzipme" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/caio-ribeiro-pereira/gzipme/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/caio-ribeiro-pereira/gzipme/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/caio-ribeiro-pereira/gzipme">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/caio-ribeiro-pereira/gzipme/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/caio-ribeiro-pereira/gzipme/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
     <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
+
       <section>
+        <div id="title">
+          <h1>Gzip files with Node.js - Gzipme</h1>
+          <p>A simple way to gzip your files with Node.js</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/caio-ribeiro-pereira">caio-ribeiro-pereira</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
         <h2>
 <a name="build-status" class="anchor" href="#build-status"><span class="octicon octicon-link"></span></a>Build Status</h2>
 
@@ -73,7 +72,15 @@
 
 <span class="c1">// Compress "file.txt" to specified file "compressed.txt" in the same dir.</span>
 <span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="s2">"compressed.txt"</span><span class="p">);</span>
+
+<span class="c1">// Compress "file.txt" using best compress mode (few bytes, but slow compression).</span>
+<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">"best"</span><span class="p">);</span> 
+
+<span class="c1">// Compress "file.txt" using fast compress mode (fast compression, but more bytes).</span>
+<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">"fast"</span><span class="p">);</span>
 </pre></div>
+
+<p><a href="http://nodejs.org/api/zlib.html#zlib_constants">Click here</a> to understand the Node.js Zlib compreension mode.</p>
 
 <h2>
 <a name="cli-version" class="anchor" href="#cli-version"><span class="octicon octicon-link"></span></a>CLI Version</h2>
@@ -93,6 +100,10 @@ gzipme file.txt
 gzipme -o file.txt
 <span class="c"># It's the same as function 'gzipme("file.txt", "compressed.txt")'.</span>
 gzipme -O compressed.txt file.txt
+<span class="c"># It's the same as function 'gzipme("file.txt", false, "best")'.</span>
+gzipme -c best file.txt
+<span class="c"># It's the same as function 'gzipme("file.txt", false, "fast")'.</span>
+gzipme -c fast file.txt
 </pre></div>
 
 <h2>
@@ -132,17 +143,17 @@ npm <span class="nb">test</span>
 <a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
 
 <ul>
-<li>Decompress gzip files</li>
-<li>Compress directories and subdirectories</li>
+<li>Decompress a gzip file</li>
+<li>Compress full directories and subdirectories</li>
 <li>Compress and Decompress in async function</li>
-</ul><p>New ideas will be welcome here! :D</p>
+</ul><p>And new ideas are welcome here!</p>
 
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The MIT License (MIT)</p>
 
-<p>Copyright (c) 2013 <a href="mailto:caio.ribeiro.pereira@gmail.com">caio.ribeiro.pereira@gmail.com</a></p>
+<p>Copyright (c) 2013 Caio R. Pereira and contributors</p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -162,10 +173,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>
       </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/caio-ribeiro-pereira">caio-ribeiro-pereira</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
+
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
