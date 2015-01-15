@@ -1,126 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Gzip files with Node.js - Gzipme by caio-ribeiro-pereira</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Gzip files with Node.js - Gzipme : A simple way to gzip your files with Node.js">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Gzip files with Node.js - Gzipme</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/caio-ribeiro-pereira/gzipme">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/caio-ribeiro-pereira/gzipme/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/caio-ribeiro-pereira/gzipme/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
 
-    <div class="wrapper">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/caio-ribeiro-pereira/gzipme">View on GitHub</a>
 
-      <section>
-        <div id="title">
-          <h1>Gzip files with Node.js - Gzipme</h1>
-          <p>A simple way to gzip your files with Node.js</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/caio-ribeiro-pereira">caio-ribeiro-pereira</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+          <h1 id="project_title">Gzip files with Node.js - Gzipme</h1>
+          <h2 id="project_tagline">A simple way to gzip your files with Node.js</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/caio-ribeiro-pereira/gzipme/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/caio-ribeiro-pereira/gzipme/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h2>
-<a name="build-status" class="anchor" href="#build-status"><span class="octicon octicon-link"></span></a>Build Status</h2>
+<a id="build-status" class="anchor" href="#build-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build Status</h2>
 
 <p><a href="https://travis-ci.org/caio-ribeiro-pereira/gzipme"><img src="https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master" alt="Build Status"></a> <a href="https://gemnasium.com/caio-ribeiro-pereira/gzipme"><img src="https://gemnasium.com/caio-ribeiro-pereira/gzipme.png" alt="Dependency Status"></a></p>
 
 <h2>
-<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
 
 <p>A simple Node module and CLI tools which gzip files for you! :)</p>
 
 <p>It's very simple to use it, just follow the documentation below...</p>
 
 <h2>
-<a name="module-version" class="anchor" href="#module-version"><span class="octicon octicon-link"></span></a>Module Version</h2>
+<a id="module-version" class="anchor" href="#module-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module Version</h2>
 
 <h3>
-<a name="instalation" class="anchor" href="#instalation"><span class="octicon octicon-link"></span></a>Instalation</h3>
+<a id="instalation" class="anchor" href="#instalation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instalation</h3>
 
-<div class="highlight"><pre>npm install gzipme
-</pre></div>
+<div class="highlight highlight-bash"><pre>npm install gzipme</pre></div>
 
 <h3>
-<a name="the-code" class="anchor" href="#the-code"><span class="octicon octicon-link"></span></a>The code</h3>
+<a id="the-code" class="anchor" href="#the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>The code</h3>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">gzipme</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gzipme'</span><span class="p">);</span>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> gzipme <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>gzipme<span class="pl-pds">'</span></span>);
 
-<span class="c1">// Compress "file.txt" to "file.txt.gz" in the same dir.</span>
-<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">);</span> 
+<span class="pl-c">// Compress "file.txt" to "file.txt.gz" in the same dir.</span>
+gzipme(<span class="pl-s1"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>); 
 
-<span class="c1">// Compress "file.txt" and overwrite it to "file.txt" in the same dir.</span>
-<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> 
+<span class="pl-c">// Compress "file.txt" and overwrite it to "file.txt" in the same dir.</span>
+gzipme(<span class="pl-s1"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>, <span class="pl-c1">true</span>); 
 
-<span class="c1">// Compress "file.txt" to specified file "compressed.txt" in the same dir.</span>
-<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="s2">"compressed.txt"</span><span class="p">);</span>
+<span class="pl-c">// Compress "file.txt" to specified file "compressed.txt" in the same dir.</span>
+gzipme(<span class="pl-s1"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>compressed.txt<span class="pl-pds">"</span></span>);
 
-<span class="c1">// Compress "file.txt" using best compress mode (few bytes, but slow compression).</span>
-<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">"best"</span><span class="p">);</span> 
+<span class="pl-c">// Compress "file.txt" using best compress mode (few bytes, but slow compression).</span>
+gzipme(<span class="pl-s1"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>, <span class="pl-c1">false</span>, <span class="pl-s1"><span class="pl-pds">"</span>best<span class="pl-pds">"</span></span>); 
 
-<span class="c1">// Compress "file.txt" using fast compress mode (fast compression, but more bytes).</span>
-<span class="nx">gzipme</span><span class="p">(</span><span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">"fast"</span><span class="p">);</span>
-</pre></div>
+<span class="pl-c">// Compress "file.txt" using fast compress mode (fast compression, but more bytes).</span>
+gzipme(<span class="pl-s1"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>, <span class="pl-c1">false</span>, <span class="pl-s1"><span class="pl-pds">"</span>fast<span class="pl-pds">"</span></span>);</pre></div>
 
 <p><a href="http://nodejs.org/api/zlib.html#zlib_constants">Click here</a> to understand the Node.js Zlib compreension mode.</p>
 
 <h2>
-<a name="cli-version" class="anchor" href="#cli-version"><span class="octicon octicon-link"></span></a>CLI Version</h2>
+<a id="cli-version" class="anchor" href="#cli-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>CLI Version</h2>
 
 <h3>
-<a name="instalation-1" class="anchor" href="#instalation-1"><span class="octicon octicon-link"></span></a>Instalation</h3>
+<a id="instalation-1" class="anchor" href="#instalation-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instalation</h3>
 
-<div class="highlight"><pre>npm install -g gzipme
-</pre></div>
+<div class="highlight highlight-bash"><pre>npm install -g gzipme</pre></div>
 
 <h3>
-<a name="the-commands" class="anchor" href="#the-commands"><span class="octicon octicon-link"></span></a>The Commands</h3>
+<a id="the-commands" class="anchor" href="#the-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Commands</h3>
 
-<div class="highlight"><pre><span class="c"># It's the same as function 'gzipme("file.txt")'.</span>
+<div class="highlight highlight-bash"><pre><span class="pl-c"># It's the same as function 'gzipme("file.txt")'.</span>
 gzipme file.txt
-<span class="c"># It's the same as function 'gzipme("file.txt", true)'.</span>
+<span class="pl-c"># It's the same as function 'gzipme("file.txt", true)'.</span>
 gzipme -o file.txt
-<span class="c"># It's the same as function 'gzipme("file.txt", "compressed.txt")'.</span>
+<span class="pl-c"># It's the same as function 'gzipme("file.txt", "compressed.txt")'.</span>
 gzipme -O compressed.txt file.txt
-<span class="c"># It's the same as function 'gzipme("file.txt", false, "best")'.</span>
+<span class="pl-c"># It's the same as function 'gzipme("file.txt", false, "best")'.</span>
 gzipme -c best file.txt
-<span class="c"># It's the same as function 'gzipme("file.txt", false, "fast")'.</span>
-gzipme -c fast file.txt
-</pre></div>
+<span class="pl-c"># It's the same as function 'gzipme("file.txt", false, "fast")'.</span>
+gzipme -c fast file.txt</pre></div>
 
 <h2>
-<a name="running-tests" class="anchor" href="#running-tests"><span class="octicon octicon-link"></span></a>Running tests</h2>
+<a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running tests</h2>
 
 <p>Just clone this repository, and follow the commands below:</p>
 
-<div class="highlight"><pre>git clone git@github.com:caio-ribeiro-pereira/gzipme.git
-<span class="nb">cd </span>gzipme
+<div class="highlight highlight-bash"><pre>git clone git@github.com:caio-ribeiro-pereira/gzipme.git
+<span class="pl-s3">cd</span> gzipme
 npm install
-npm <span class="nb">test</span>
-</pre></div>
+npm <span class="pl-s3">test</span></pre></div>
 
 <p>It will run Mocha tests and will generate coverage reports and <a href="http://caio-ribeiro-pereira.github.io/gzipme/coverage.html">all coverage tests are here</a>.</p>
 
 <h2>
-<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
 
 <p>Caio Ribeiro Pereira <a href="mailto:caio.ribeiro.pereira@gmail.com">caio.ribeiro.pereira@gmail.com</a></p>
 
@@ -129,16 +117,18 @@ npm <span class="nb">test</span>
 <p>Blog: <a href="http://udgwebdev.com">http://udgwebdev.com</a></p>
 
 <h2>
-<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO</h2>
 
 <ul>
 <li>Decompress a gzip file</li>
 <li>Compress full directories and subdirectories</li>
 <li>Compress and Decompress in async function</li>
-</ul><p>And new ideas are welcome here!</p>
+</ul>
+
+<p>And new ideas are welcome here!</p>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The MIT License (MIT)</p>
 
@@ -162,9 +152,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>
       </section>
-
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Gzip files with Node.js - Gzipme maintained by <a href="https://github.com/caio-ribeiro-pereira">caio-ribeiro-pereira</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -175,6 +172,7 @@ THE SOFTWARE.</p>
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
